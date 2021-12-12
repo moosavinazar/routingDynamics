@@ -3,3 +3,7 @@
   <p>The user name is: {{ selectedUser.name }}</p>
 </div>
 <ng-template #elsecond>The user doesn't exist</ng-template>
+
+<br>
+<a [routerLink]="['/users', '2']">Select second user</a>
+

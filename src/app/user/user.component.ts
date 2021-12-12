@@ -36,7 +36,9 @@ export class UserComponent implements OnInit {
     if (!this.selectedUser) {
       this.isUserFound = false;
     }
-    console.log(this.selectedUser);
+    this.route.params.subscribe((params) => {
+      this.selectedUser = <IUser>this.users.find(user => user.id === +params['id']);
+    });
   }
 
 }
